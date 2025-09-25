@@ -1,0 +1,5 @@
+<resources>
+<style name="Widget.Material3.Button.Filled" parent="Widget.Material3.Button" />
+<style name="TextAppearance.Material3.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium" />
+<style name="TextAppearance.Material3.BodyLarge" parent="TextAppearance.Material3.BodyLarge" />
+</resources>
