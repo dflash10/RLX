@@ -175,6 +175,11 @@ If you encounter any issues or have questions:
 - **Target SDK**: 34 (Android 14)
 - **Build System**: Gradle
 - **Architecture**: Single Activity with Navigation
+- Gradle (wrapper distribution): 9.0-milestone-1
+- Kotlin: 1.9.24
+- Also relevant: Android Gradle Plugin = 8.5.2
+- Android Studio is Narwhal 3 Feature Drop (2025.1.3)
+- Java SDK (JDK) used to build: JDK 17 
 
 ---
 
