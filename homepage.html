@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHealth - Wellness App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #EAF5E3 0%, #F7F3E3 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: #4CAF50;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h1 {
+            color: #2E2E2E;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .subtitle {
+            color: #888888;
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        .feature h3 {
+            color: #2E2E2E;
+            margin: 0 0 15px;
+        }
+        .feature p {
+            color: #888888;
+            line-height: 1.6;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888888;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">RH</div>
+            <h1>RHealth</h1>
+            <p class="subtitle">Your Personal Wellness Companion</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔐</div>
+                <h3>Secure Authentication</h3>
+                <p>Google OIDC integration ensures your data is protected with industry-standard security protocols.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Modern Interface</h3>
+                <p>Clean, intuitive design built with Jetpack Compose for the best user experience.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">☁️</div>
+                <h3>Cloud Sync</h3>
+                <p>Your wellness data is securely stored and synced across all your devices.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Personalized</h3>
+                <p>Tailored recommendations and tracking based on your personal health goals.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="#" class="btn">Download RHealth</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 RHealth. Powered by Rachaita Labs.</p>
+            <p>Built with ❤️ for your wellness journey</p>
+        </div>
+    </div>
+</body>
+</html>
