@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Rhealth</string>
+    <string name="sign_in_with_google">Sign in with Google (OIDC)</string>
+    <string name="sign_in_error_title">Sign-in Error</string>
+    <string name="sign_in_error_message">An error occurred while attempting Google OIDC sign-in.</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="server_client_id">YOUR_GOOGLE_WEB_CLIENT_ID</string>
+    <string name="android_client_id">YOUR_GOOGLE_ANDROID_CLIENT_ID</string>
+    <string name="client_secret">YOUR_GOOGLE_CLIENT_SECRET</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="sign_in_subtitle">Sign in to continue</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="profile_title">User Profile</string>
+    <string name="authentication_successful">Authentication successful!</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="loading">Loading...</string>
+    <string name="authenticating">Authenticating...</string>
+</resources>
