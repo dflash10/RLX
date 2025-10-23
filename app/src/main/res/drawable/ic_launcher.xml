@@ -3,7 +3,19 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
+    
+    <!-- Circle background -->
     <path
-        android:fillColor="#FF6200EE"
-        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM13,17h-2v-6h2v6zM13,9h-2L11,7h2v2z"/>
+        android:fillColor="#4CAF50"
+        android:pathData="M12,12m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    
+    <!-- R letter -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M7,5 L7,19 L9.5,19 L9.5,12 L12,12 L15,19 L18,19 L14.5,11 L17,5 L14.5,5 L12,9 L9.5,9 L9.5,5 Z" />
+    
+    <!-- Heart symbol -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,14 C12,14 10,12 10,10 C10,9 11,8 12,8 C13,8 14,9 14,10 C14,12 12,14 12,14 Z" />
 </vector>

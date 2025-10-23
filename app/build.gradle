@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
 android {
     namespace 'com.example.googleoidcdemo'
@@ -7,10 +8,13 @@ android {
 
     defaultConfig {
         applicationId "com.example.googleoidcdemo"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
         versionName "1.0"
+        
+        // Enable modern security features
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -24,27 +28,81 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildFeatures {
-        viewBinding true
+        compose true
+    }
+    
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
+    
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs += ["-Xsuppress-version-warnings"]
     }
 }
 
 dependencies {
-    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.24')
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.23')
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.23'
 
+    // Google OIDC Authentication (no Firebase needed)
+
+    // Core Android
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.7'
+    implementation 'androidx.activity:activity-compose:1.9.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
+    // Compose BOM
+    implementation platform('androidx.compose:compose-bom:2024.10.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material-icons-extended'
+    
+    // Navigation
+    implementation 'androidx.navigation:navigation-compose:2.8.0'
+    
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7'
 
+    // Google Sign-In and OIDC
     implementation 'com.google.android.gms:play-services-auth:21.2.0'
+    
+    // Network and HTTP - Latest versions with TLS 1.3 support
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    
+    // JSON Web Token validation
+    implementation 'com.auth0:java-jwt:4.4.0'
+    implementation 'com.auth0:jwks-rsa:0.22.1'
+    
+    // Crypto utilities for PKCE
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
+    implementation 'commons-codec:commons-codec:1.16.1'
+    
+    // Image loading for profile pictures
+    implementation 'io.coil-kt:coil-compose:2.5.0'
 }
+
+// Resolve dependency conflicts
+configurations.all {
+    resolutionStrategy {
+        // Force specific versions to resolve conflicts
+        force 'com.google.guava:guava:31.1-android'
+        force 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+        
+        // Exclude problematic transitive dependencies
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+}
+
