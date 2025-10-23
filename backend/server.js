@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const https = require('https');
+const fs = require('fs');
 const config = require('./config');
 
 // Import routes
@@ -175,11 +177,41 @@ process.on('SIGTERM', async () => {
 });
 
 const PORT = config.PORT;
-app.listen(PORT, () => {
-  console.log(`🚀 RHealth Backend API running on port ${PORT}`);
-  console.log(`📱 Environment: ${config.NODE_ENV}`);
-  console.log(`🔗 Health check: http://localhost:${PORT}/health`);
-  console.log(`🔐 Auth endpoints: http://localhost:${PORT}/api/auth`);
-});
+
+// Start server with HTTPS or HTTP based on configuration
+if (config.USE_HTTPS && config.SSL_CERT_PATH && config.SSL_KEY_PATH) {
+  try {
+    const options = {
+      cert: fs.readFileSync(config.SSL_CERT_PATH),
+      key: fs.readFileSync(config.SSL_KEY_PATH)
+    };
+    
+    https.createServer(options, app).listen(PORT, () => {
+      console.log(`🚀 RHealth Backend API running on HTTPS port ${PORT}`);
+      console.log(`📱 Environment: ${config.NODE_ENV}`);
+      console.log(`🔗 Health check: https://localhost:${PORT}/health`);
+      console.log(`🔐 Auth endpoints: https://localhost:${PORT}/api/auth`);
+      console.log(`🔒 SSL Certificate: ${config.SSL_CERT_PATH}`);
+    });
+  } catch (error) {
+    console.error('❌ HTTPS setup failed:', error.message);
+    console.log('🔄 Falling back to HTTP...');
+    startHttpServer();
+  }
+} else {
+  startHttpServer();
+}
+
+function startHttpServer() {
+  app.listen(PORT, () => {
+    console.log(`🚀 RHealth Backend API running on HTTP port ${PORT}`);
+    console.log(`📱 Environment: ${config.NODE_ENV}`);
+    console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+    console.log(`🔐 Auth endpoints: http://localhost:${PORT}/api/auth`);
+    if (config.NODE_ENV === 'production') {
+      console.log('⚠️  WARNING: Running in production without HTTPS!');
+    }
+  });
+}
 
 module.exports = app;

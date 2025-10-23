@@ -14,11 +14,16 @@ module.exports = {
   // Server Configuration
   PORT: process.env.PORT || 8080,
   NODE_ENV: process.env.NODE_ENV || 'development',
+  USE_HTTPS: process.env.USE_HTTPS === 'true' || false,
+  SSL_CERT_PATH: process.env.SSL_CERT_PATH || '',
+  SSL_KEY_PATH: process.env.SSL_KEY_PATH || '',
   
   // Google OAuth Configuration
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || '',
   GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET || '',
   
   // CORS Configuration
-  CORS_ORIGIN: process.env.CORS_ORIGIN || 'http://localhost:3000,http://localhost:8080'
+  CORS_ORIGIN: process.env.CORS_ORIGIN || (process.env.NODE_ENV === 'production' 
+    ? 'https://yourdomain.com,https://www.yourdomain.com' 
+    : 'http://localhost:3000,http://localhost:8080')
 };

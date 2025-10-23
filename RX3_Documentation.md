@@ -142,6 +142,9 @@ RX3-RHealth/
    # Server Configuration
    PORT=8080
    NODE_ENV=development
+   USE_HTTPS=false
+   SSL_CERT_PATH=./certificates/server.crt
+   SSL_KEY_PATH=./certificates/server.key
    CORS_ORIGIN=http://localhost:3000,http://localhost:8080
    ```
 
@@ -318,6 +321,31 @@ If you accidentally commit secrets:
    - Clusters → Connect → Connect your application
    - Copy connection string
    - Replace `<password>` with your database user password
+
+### HTTPS Setup
+
+**Important:** The project now supports HTTPS for production security.
+
+1. **For Development (Optional):**
+   ```bash
+   # Generate self-signed certificate
+   mkdir backend/certificates
+   cd backend/certificates
+   openssl genrsa -out server.key 2048
+   openssl req -new -x509 -key server.key -out server.crt -days 365
+   ```
+
+2. **For Production (Required):**
+   - Use Let's Encrypt certificates
+   - Or deploy to cloud platforms (Heroku, Railway, Vercel) for automatic HTTPS
+   - See `HTTPS_SETUP_GUIDE.md` for detailed instructions
+
+3. **Environment Variables:**
+   ```env
+   USE_HTTPS=true
+   SSL_CERT_PATH=/path/to/certificate.crt
+   SSL_KEY_PATH=/path/to/private.key
+   ```
 
 ---
 
