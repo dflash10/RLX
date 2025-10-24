@@ -40,8 +40,8 @@ fun LoginScreen(
             .background(
                 brush = Brush.verticalGradient(
                     colors = listOf(
-                        RHealthBgLight,
-                        RHealthBgBeige
+                        RLXBgLight,
+                        RLXBgBeige
                     )
                 )
             )
@@ -59,12 +59,12 @@ fun LoginScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(RHealthBrown),
+                    .background(RLXBrown),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_rhealth_logo),
-                    contentDescription = "RHealth Logo",
+                    painter = painterResource(id = R.drawable.ic_rlx_logo),
+                    contentDescription = "RLX Logo",
                     modifier = Modifier.size(60.dp)
                 )
             }
@@ -74,7 +74,7 @@ fun LoginScreen(
             // Heading
             Text(
                 text = "Welcome back! Glad to see you, Again!",
-                color = RHealthText,
+                color = RLXText,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center
@@ -92,10 +92,10 @@ fun LoginScreen(
                 label = { Text("Email/Phone") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = RHealthOrange,
-                    unfocusedBorderColor = RHealthOrange,
-                    focusedLabelColor = RHealthText,
-                    unfocusedLabelColor = RHealthTextGray
+                    focusedBorderColor = RLXOrange,
+                    unfocusedBorderColor = RLXOrange,
+                    focusedLabelColor = RLXText,
+                    unfocusedLabelColor = RLXTextGray
                 ),
                 shape = RoundedCornerShape(10.dp),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
@@ -114,10 +114,10 @@ fun LoginScreen(
                 label = { Text("Password") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = RHealthOrange,
-                    unfocusedBorderColor = RHealthOrange,
-                    focusedLabelColor = RHealthText,
-                    unfocusedLabelColor = RHealthTextGray
+                    focusedBorderColor = RLXOrange,
+                    unfocusedBorderColor = RLXOrange,
+                    focusedLabelColor = RLXText,
+                    unfocusedLabelColor = RLXTextGray
                 ),
                 shape = RoundedCornerShape(10.dp),
                 visualTransformation = PasswordVisualTransformation(),
@@ -165,20 +165,20 @@ fun LoginScreen(
                     .fillMaxWidth()
                     .height(56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = RHealthGreen
+                    containerColor = RLXGreen
                 ),
                 shape = RoundedCornerShape(12.dp),
                 enabled = !isLoading
             ) {
                 if (isLoading) {
                     CircularProgressIndicator(
-                        color = RHealthWhite,
+                        color = RLXWhite,
                         modifier = Modifier.size(20.dp)
                     )
                 } else {
                     Text(
                         text = "Login",
-                        color = RHealthWhite,
+                        color = RLXWhite,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -196,7 +196,7 @@ fun LoginScreen(
             ) {
                 Text(
                     text = "Login with phone (OTP)",
-                    color = RHealthText
+                    color = RLXText
                 )
             }
             
@@ -205,7 +205,7 @@ fun LoginScreen(
             // Footer
             Text(
                 text = "Powered by Rachaita Labs",
-                color = RHealthTextGray,
+                color = RLXTextGray,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Light,
                 textAlign = TextAlign.Center,

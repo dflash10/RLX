@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 class SessionManager(private val context: Context) {
     companion object {
         private const val TAG = "SessionManager"
-        private const val PREFS_NAME = "rhealth_session"
+        private const val PREFS_NAME = "rlx_session"
         private const val KEY_ACCESS_TOKEN = "access_token"
         private const val KEY_REFRESH_TOKEN = "refresh_token"
         private const val KEY_USER_ID = "user_id"

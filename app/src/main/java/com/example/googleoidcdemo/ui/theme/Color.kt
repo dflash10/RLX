@@ -2,40 +2,40 @@ package com.example.googleoidcdemo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// RHealth Color Palette
-val RHealthGreen = Color(0xFF4CAF50)
-val RHealthBrown = Color(0xFF6B4226)
-val RHealthOrange = Color(0xFFFF9800)
-val RHealthBgLight = Color(0xFFEAF5E3)
-val RHealthBgBeige = Color(0xFFF7F3E3)
-val RHealthText = Color(0xFF2E2E2E)
-val RHealthTextGray = Color(0xFF888888)
-val RHealthWhite = Color(0xFFFFFFFF)
+// RLX Color Palette
+val RLXGreen = Color(0xFF4CAF50)
+val RLXBrown = Color(0xFF6B4226)
+val RLXOrange = Color(0xFFFF9800)
+val RLXBgLight = Color(0xFFEAF5E3)
+val RLXBgBeige = Color(0xFFF7F3E3)
+val RLXText = Color(0xFF2E2E2E)
+val RLXTextGray = Color(0xFF888888)
+val RLXWhite = Color(0xFFFFFFFF)
 
 // Light theme colors
-val LightPrimary = RHealthGreen
-val LightOnPrimary = RHealthWhite
-val LightPrimaryContainer = RHealthBgLight
-val LightOnPrimaryContainer = RHealthText
+val LightPrimary = RLXGreen
+val LightOnPrimary = RLXWhite
+val LightPrimaryContainer = RLXBgLight
+val LightOnPrimaryContainer = RLXText
 
-val LightSecondary = RHealthBrown
-val LightOnSecondary = RHealthWhite
-val LightSecondaryContainer = RHealthBgBeige
-val LightOnSecondaryContainer = RHealthText
+val LightSecondary = RLXBrown
+val LightOnSecondary = RLXWhite
+val LightSecondaryContainer = RLXBgBeige
+val LightOnSecondaryContainer = RLXText
 
-val LightTertiary = RHealthOrange
-val LightOnTertiary = RHealthWhite
+val LightTertiary = RLXOrange
+val LightOnTertiary = RLXWhite
 
-val LightBackground = RHealthBgLight
-val LightOnBackground = RHealthText
-val LightSurface = RHealthWhite
-val LightOnSurface = RHealthText
+val LightBackground = RLXBgLight
+val LightOnBackground = RLXText
+val LightSurface = RLXWhite
+val LightOnSurface = RLXText
 
 val LightError = Color(0xFFBA1A1A)
-val LightOnError = RHealthWhite
+val LightOnError = RLXWhite
 val LightErrorContainer = Color(0xFFFFDAD6)
 val LightOnErrorContainer = Color(0xFF410002)
 
-val LightOutline = RHealthOrange
-val LightOutlineVariant = RHealthTextGray
+val LightOutline = RLXOrange
+val LightOutlineVariant = RLXTextGray
 

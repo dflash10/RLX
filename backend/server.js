@@ -60,7 +60,7 @@ mongoose.connect(config.MONGODB_URI)
 app.get('/health', (req, res) => {
   res.json({
     success: true,
-    message: 'RHealth Backend API is running',
+    message: 'RLX Backend API is running',
     timestamp: new Date().toISOString(),
     environment: config.NODE_ENV,
     mongodb: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
@@ -116,7 +116,7 @@ app.get('/oauth/callback', (req, res) => {
               <h1>Authentication Successful</h1>
               <p>If the mobile app didn't open automatically, please:</p>
               <ol>
-                <li>Open the RHealth mobile app</li>
+                <li>Open the RLX mobile app</li>
                 <li>The authentication should complete automatically</li>
               </ol>
               <p>Authorization Code: <code>${code}</code></p>
@@ -187,7 +187,7 @@ if (config.USE_HTTPS && config.SSL_CERT_PATH && config.SSL_KEY_PATH) {
     };
     
     https.createServer(options, app).listen(PORT, () => {
-      console.log(`🚀 RHealth Backend API running on HTTPS port ${PORT}`);
+      console.log(`🚀 RLX Backend API running on HTTPS port ${PORT}`);
       console.log(`📱 Environment: ${config.NODE_ENV}`);
       console.log(`🔗 Health check: https://localhost:${PORT}/health`);
       console.log(`🔐 Auth endpoints: https://localhost:${PORT}/api/auth`);
@@ -204,7 +204,7 @@ if (config.USE_HTTPS && config.SSL_CERT_PATH && config.SSL_KEY_PATH) {
 
 function startHttpServer() {
   app.listen(PORT, () => {
-    console.log(`🚀 RHealth Backend API running on HTTP port ${PORT}`);
+    console.log(`🚀 RLX Backend API running on HTTP port ${PORT}`);
     console.log(`📱 Environment: ${config.NODE_ENV}`);
     console.log(`🔗 Health check: http://localhost:${PORT}/health`);
     console.log(`🔐 Auth endpoints: http://localhost:${PORT}/api/auth`);

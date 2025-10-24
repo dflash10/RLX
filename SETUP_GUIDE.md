@@ -1,6 +1,6 @@
-# RHealth Complete Setup Guide
+# RLX Complete Setup Guide
 
-This guide will help you set up the complete RHealth application with Google OIDC authentication, MongoDB Atlas integration, and persistent user sessions.
+This guide will help you set up the complete RLX application with Google OIDC authentication, MongoDB Atlas integration, and persistent user sessions.
 
 ## 🏗️ Architecture Overview
 

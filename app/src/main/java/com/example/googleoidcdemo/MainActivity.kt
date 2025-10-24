@@ -23,8 +23,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.googleoidcdemo.auth.OidcAuthManager
 import com.example.googleoidcdemo.auth.SessionManager
 import com.example.googleoidcdemo.api.ApiService
-import com.example.googleoidcdemo.navigation.RHealthNavigation
-import com.example.googleoidcdemo.ui.theme.RHealthTheme
+import com.example.googleoidcdemo.navigation.RLXNavigation
+import com.example.googleoidcdemo.ui.theme.RLXTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -52,12 +52,12 @@ class MainActivity : ComponentActivity() {
         
         try {
             setContent {
-                RHealthTheme {
+                RLXTheme {
                     Surface(
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        RHealthApp(this@MainActivity, this@MainActivity)
+                        RLXApp(this@MainActivity, this@MainActivity)
                     }
                 }
             }
@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
             Log.e(TAG, "Error in MainActivity onCreate", e)
             // Fallback to simple content if there's an error
             setContent {
-                RHealthTheme {
+                RLXTheme {
                     Surface(
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
@@ -214,9 +214,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun RHealthApp(context: Context, mainActivity: MainActivity) {
+fun RLXApp(context: Context, mainActivity: MainActivity) {
     val navController = rememberNavController()
-    RHealthNavigation(navController = navController, context = context, mainActivity = mainActivity)
+    RLXNavigation(navController = navController, context = context, mainActivity = mainActivity)
 }
 
 @Composable
@@ -229,7 +229,7 @@ fun ErrorFallbackScreen() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "RHealth App",
+            text = "RLX App",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.primary

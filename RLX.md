@@ -1,10 +1,10 @@
-# RHealth - Wellness App
+# RLX - Wellness App
 
 A modern Jetpack Compose wellness app with an organic, minimal aesthetic built for Android.
 
 ## 🌈 Features
 
-- **Welcome Screen**: Wooden texture background with RHealth logo and "Start Now" button
+- **Welcome Screen**: Wooden texture background with RLX logo and "Start Now" button
 - **Sign Up Screen**: Gradient background with form fields and social login options
 - **Login Screen**: Clean login interface with forgot password option
 - **User Details Screen**: Comprehensive form with sliders for height/weight and dropdowns for personal information
@@ -12,14 +12,14 @@ A modern Jetpack Compose wellness app with an organic, minimal aesthetic built f
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary Green**: #4CAF50 (RHealthGreen)
-- **Accent Brown**: #6B4226 (RHealthBrown)
-- **Orange Border**: #FF9800 (RHealthOrange)
-- **Background Light Green**: #EAF5E3 (RHealthBgLight)
-- **Background Beige**: #F7F3E3 (RHealthBgBeige)
-- **Text Dark**: #2E2E2E (RHealthText)
-- **Text Gray**: #888888 (RHealthTextGray)
-- **White**: #FFFFFF (RHealthWhite)
+- **Primary Green**: #4CAF50 (RLXGreen)
+- **Accent Brown**: #6B4226 (RLXBrown)
+- **Orange Border**: #FF9800 (RLXOrange)
+- **Background Light Green**: #EAF5E3 (RLXBgLight)
+- **Background Beige**: #F7F3E3 (RLXBgBeige)
+- **Text Dark**: #2E2E2E (RLXText)
+- **Text Gray**: #888888 (RLXTextGray)
+- **White**: #FFFFFF (RLXWhite)
 
 ### Typography
 - **Font Family**: Roboto
@@ -33,7 +33,7 @@ A modern Jetpack Compose wellness app with an organic, minimal aesthetic built f
 
 - **UI Framework**: Jetpack Compose
 - **Navigation**: Navigation Compose
-- **Theme**: Material 3 with custom RHealth theme
+- **Theme**: Material 3 with custom RLX theme
 - **State Management**: Compose State
 - **Architecture**: MVVM pattern ready
 
@@ -62,4 +62,3 @@ A modern Jetpack Compose wellness app with an organic, minimal aesthetic built f
 ## 📄 License
 
 Powered by Rachaita Labs
-

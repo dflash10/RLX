@@ -1,6 +1,6 @@
-# RHealth Backend API
+# RLX Backend API
 
-A Node.js backend API for the RHealth mobile application with MongoDB Atlas integration for user authentication and session management.
+A Node.js backend API for the RLX mobile application with MongoDB Atlas integration for user authentication and session management.
 
 ## Features
 

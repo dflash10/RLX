@@ -1,4 +1,4 @@
-# HTTPS Setup Guide for RX3 RHealth App
+# HTTPS Setup Guide for RLX App
 
 ## 🔒 Why HTTPS is Important
 

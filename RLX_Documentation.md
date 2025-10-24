@@ -1,5 +1,5 @@
-# RX3 Documentation
-## RHealth Wellness App - Complete Development Guide
+# RLX Documentation
+## RLX Wellness App - Complete Development Guide
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## 🏥 Project Overview
 
-**RX3 (RHealth)** is a comprehensive wellness application built with modern technologies:
+**RLX** is a comprehensive wellness application built with modern technologies:
 
 - **Frontend**: Android app using Jetpack Compose
 - **Backend**: Node.js with Express.js and MongoDB
@@ -35,14 +35,14 @@
 - 📊 Health data collection and validation
 - 🔄 Real-time form validation
 - 📱 Responsive slide-out navigation
-- 🎨 Custom RHealth design system
+- 🎨 Custom RLX design system
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-RX3-RHealth/
+RLX/
 ├── app/                          # Android Application
 │   ├── src/main/
 │   │   ├── java/com/example/googleoidcdemo/
@@ -91,8 +91,8 @@ RX3-RHealth/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/RX3-RHealth.git
-   cd RX3-RHealth
+   git clone https://github.com/yourusername/RLX.git
+   cd RLX
    ```
 
 2. **Set up the backend:**
@@ -180,7 +180,7 @@ RX3-RHealth/
 1. **Create a new repository on GitHub:**
    - Go to GitHub.com
    - Click "New repository"
-   - Name: `RX3-RHealth` or `android-google-oidc-demo`
+   - Name: `RLX` or `android-google-oidc-demo`
    - Make it public or private as needed
    - Don't initialize with README (we have existing files)
 
@@ -188,12 +188,12 @@ RX3-RHealth/
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: RX3 RHealth wellness app"
+   git commit -m "Initial commit: RLX wellness app"
    ```
 
 3. **Connect to remote repository:**
    ```bash
-   git remote add origin https://github.com/yourusername/RX3-RHealth.git
+   git remote add origin https://github.com/yourusername/RLX.git
    git branch -M main
    git push -u origin main
    ```
@@ -444,7 +444,7 @@ Authorization: Bearer <access_token>
 
 3. **Create Heroku app:**
    ```bash
-   heroku create rx3-rhealth-backend
+   heroku create rlx-backend
    ```
 
 4. **Set environment variables:**

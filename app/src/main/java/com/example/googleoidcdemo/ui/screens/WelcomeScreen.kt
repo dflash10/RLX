@@ -18,8 +18,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.googleoidcdemo.R
-import com.example.googleoidcdemo.ui.theme.RHealthBrown
-import com.example.googleoidcdemo.ui.theme.RHealthWhite
+import com.example.googleoidcdemo.ui.theme.RLXBrown
+import com.example.googleoidcdemo.ui.theme.RLXWhite
 
 @Composable
 fun WelcomeScreen(
@@ -46,8 +46,8 @@ fun WelcomeScreen(
         ) {
             // Logo
             Image(
-                painter = painterResource(id = R.drawable.ic_rhealth_logo),
-                contentDescription = "RHealth Logo",
+                painter = painterResource(id = R.drawable.ic_rlx_logo),
+                contentDescription = "RLX Logo",
                 modifier = Modifier.size(120.dp)
             )
             
@@ -56,7 +56,7 @@ fun WelcomeScreen(
             // Welcome Text
             Text(
                 text = "Discover your wellness Journey",
-                color = RHealthWhite,
+                color = RLXWhite,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -72,13 +72,13 @@ fun WelcomeScreen(
                     .fillMaxWidth()
                     .height(56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = RHealthBrown
+                    containerColor = RLXBrown
                 ),
                 shape = RoundedCornerShape(12.dp)
             ) {
                 Text(
                     text = "Start Now",
-                    color = RHealthWhite,
+                    color = RLXWhite,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold
                 )

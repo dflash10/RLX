@@ -16,24 +16,24 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = RHealthGreen,
-    onPrimary = RHealthWhite,
-    primaryContainer = RHealthBrown,
-    onPrimaryContainer = RHealthWhite,
-    secondary = RHealthOrange,
-    onSecondary = RHealthWhite,
-    tertiary = RHealthBrown,
-    onTertiary = RHealthWhite,
-    background = RHealthText,
-    onBackground = RHealthWhite,
-    surface = RHealthText,
-    onSurface = RHealthWhite,
+    primary = RLXGreen,
+    onPrimary = RLXWhite,
+    primaryContainer = RLXBrown,
+    onPrimaryContainer = RLXWhite,
+    secondary = RLXOrange,
+    onSecondary = RLXWhite,
+    tertiary = RLXBrown,
+    onTertiary = RLXWhite,
+    background = RLXText,
+    onBackground = RLXWhite,
+    surface = RLXText,
+    onSurface = RLXWhite,
     error = LightError,
-    onError = RHealthWhite,
+    onError = RLXWhite,
     errorContainer = LightErrorContainer,
     onErrorContainer = LightOnErrorContainer,
-    outline = RHealthOrange,
-    outlineVariant = RHealthTextGray
+    outline = RLXOrange,
+    outlineVariant = RLXTextGray
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -60,7 +60,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun RHealthTheme(
+fun RLXTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -86,7 +86,7 @@ fun RHealthTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = RHealthTypography,
+        typography = RLXTypography,
         content = content
     )
 }

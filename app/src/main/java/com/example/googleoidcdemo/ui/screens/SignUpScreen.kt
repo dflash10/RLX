@@ -64,8 +64,8 @@ fun SignUpScreen(
             .background(
                 brush = Brush.verticalGradient(
                     colors = listOf(
-                        RHealthBgLight,
-                        RHealthBgBeige
+                        RLXBgLight,
+                        RLXBgBeige
                     )
                 )
             )
@@ -83,12 +83,12 @@ fun SignUpScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .clip(CircleShape)
-                    .background(RHealthBrown),
+                    .background(RLXBrown),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_rhealth_logo),
-                    contentDescription = "RHealth Logo",
+                    painter = painterResource(id = R.drawable.ic_rlx_logo),
+                    contentDescription = "RLX Logo",
                     modifier = Modifier.size(60.dp)
                 )
             }
@@ -98,7 +98,7 @@ fun SignUpScreen(
             // Heading
             Text(
                 text = "Just a few quick things to get started",
-                color = RHealthText,
+                color = RLXText,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
                 textAlign = TextAlign.Center
@@ -116,10 +116,10 @@ fun SignUpScreen(
                 label = { Text("Email/Phone no.") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = RHealthOrange,
-                    unfocusedBorderColor = RHealthOrange,
-                    focusedLabelColor = RHealthText,
-                    unfocusedLabelColor = RHealthTextGray
+                    focusedBorderColor = RLXOrange,
+                    unfocusedBorderColor = RLXOrange,
+                    focusedLabelColor = RLXText,
+                    unfocusedLabelColor = RLXTextGray
                 ),
                 shape = RoundedCornerShape(10.dp),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
@@ -139,10 +139,10 @@ fun SignUpScreen(
                     label = { Text("Enter OTP") },
                     modifier = Modifier.fillMaxWidth(),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = RHealthOrange,
-                        unfocusedBorderColor = RHealthOrange,
-                        focusedLabelColor = RHealthText,
-                        unfocusedLabelColor = RHealthTextGray
+                        focusedBorderColor = RLXOrange,
+                        unfocusedBorderColor = RLXOrange,
+                        focusedLabelColor = RLXText,
+                        unfocusedLabelColor = RLXTextGray
                     ),
                     shape = RoundedCornerShape(10.dp),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -167,13 +167,13 @@ fun SignUpScreen(
                         .fillMaxWidth()
                         .height(56.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = RHealthOrange
+                        containerColor = RLXOrange
                     ),
                     shape = RoundedCornerShape(12.dp)
                 ) {
                     Text(
                         text = "Verify OTP",
-                        color = RHealthWhite,
+                        color = RLXWhite,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -192,10 +192,10 @@ fun SignUpScreen(
                 label = { Text("Password") },
                 modifier = Modifier.fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = RHealthOrange,
-                    unfocusedBorderColor = RHealthOrange,
-                    focusedLabelColor = RHealthText,
-                    unfocusedLabelColor = RHealthTextGray
+                    focusedBorderColor = RLXOrange,
+                    unfocusedBorderColor = RLXOrange,
+                    focusedLabelColor = RLXText,
+                    unfocusedLabelColor = RLXTextGray
                 ),
                 shape = RoundedCornerShape(10.dp),
                 visualTransformation = PasswordVisualTransformation(),
@@ -209,7 +209,7 @@ fun SignUpScreen(
             if (successMessage.isNotEmpty()) {
                 Text(
                     text = successMessage,
-                    color = RHealthGreen,
+                    color = RLXGreen,
                     fontSize = 14.sp,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -229,7 +229,7 @@ fun SignUpScreen(
             
             Spacer(modifier = Modifier.height(16.dp))
             
-            // Join RHealth Button
+            // Join RLX Button
             Button(
                 onClick = {
                     if (emailOrPhone.isNotEmpty() && password.isNotEmpty()) {
@@ -245,24 +245,24 @@ fun SignUpScreen(
                     .fillMaxWidth()
                     .height(56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = RHealthGreen
+                    containerColor = RLXGreen
                 ),
                 shape = RoundedCornerShape(12.dp),
                 enabled = !isLoading && !((isVerificationSent && !isEmailVerified && !isOTPVerified) && otpCode.isEmpty())
             ) {
                 if (isLoading) {
                     CircularProgressIndicator(
-                        color = RHealthWhite,
+                        color = RLXWhite,
                         modifier = Modifier.size(20.dp)
                     )
                 } else {
                     Text(
                         text = when {
                             !isVerificationSent -> "Send Verification"
-                            isEmailVerified || isOTPVerified -> "Join RHealth"
+                            isEmailVerified || isOTPVerified -> "Join RLX"
                             else -> "Complete Registration"
                         },
-                        color = RHealthWhite,
+                        color = RLXWhite,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.SemiBold
                     )
@@ -278,18 +278,18 @@ fun SignUpScreen(
             ) {
                 HorizontalDivider(
                     modifier = Modifier.weight(1f),
-                    color = RHealthTextGray,
+                    color = RLXTextGray,
                     thickness = 1.dp
                 )
                 Text(
                     text = "— OR —",
-                    color = RHealthTextGray,
+                    color = RLXTextGray,
                     fontSize = 14.sp,
                     modifier = Modifier.padding(horizontal = 16.dp)
                 )
                 HorizontalDivider(
                     modifier = Modifier.weight(1f),
-                    color = RHealthTextGray,
+                    color = RLXTextGray,
                     thickness = 1.dp
                 )
             }
@@ -311,7 +311,7 @@ fun SignUpScreen(
                     modifier = Modifier
                         .size(56.dp)
                         .clip(CircleShape)
-                        .background(RHealthWhite)
+                        .background(RLXWhite)
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.ic_google_logo),
@@ -340,7 +340,7 @@ fun SignUpScreen(
             // Footer
             Text(
                 text = "Powered by Rachaita Labs",
-                color = RHealthTextGray,
+                color = RLXTextGray,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Light,
                 textAlign = TextAlign.Center,

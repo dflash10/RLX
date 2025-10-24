@@ -25,7 +25,7 @@ This guide will help you set up Google OIDC authentication directly through Goog
 1. Go to **APIs & Services** → **OAuth consent screen**
 2. Choose **External** user type (unless you have Google Workspace)
 3. Fill in required fields:
-   - **App name**: RHealth
+   - **App name**: RLX
    - **User support email**: Your email
    - **Developer contact information**: Your email
 4. Add scopes:
@@ -41,7 +41,7 @@ This guide will help you set up Google OIDC authentication directly through Goog
 2. Click **+ CREATE CREDENTIALS** → **OAuth 2.0 Client ID**
 3. Choose **Android** as application type
 4. Fill in:
-   - **Name**: RHealth Android
+   - **Name**: RLX Android
    - **Package name**: `com.example.googleoidcdemo`
    - **SHA-1 certificate fingerprint**: `25:DD:90:BA:F8:74:8F:6B:4D:FB:50:8B:15:92:AB:77:BE:21:1E:4B`
 5. Click **Create**
@@ -51,7 +51,7 @@ This guide will help you set up Google OIDC authentication directly through Goog
 1. In the same **Credentials** page, click **+ CREATE CREDENTIALS** → **OAuth 2.0 Client ID**
 2. Choose **Web application** as application type
 3. Fill in:
-   - **Name**: RHealth Web Client
+   - **Name**: RLX Web Client
    - **Authorized redirect URIs**: 
      - `http://localhost:8080/callback` (for testing)
      - `https://yourdomain.com/callback` (for production)

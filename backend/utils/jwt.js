@@ -11,8 +11,8 @@ const generateAccessToken = (user) => {
 
   return jwt.sign(payload, config.JWT_SECRET, {
     expiresIn: config.JWT_EXPIRES_IN,
-    issuer: 'rhealth-api',
-    audience: 'rhealth-mobile'
+    issuer: 'rlx-api',
+    audience: 'rlx-mobile'
   });
 };
 
@@ -25,8 +25,8 @@ const generateRefreshToken = (user) => {
 
   return jwt.sign(payload, config.JWT_SECRET, {
     expiresIn: config.REFRESH_TOKEN_EXPIRES_IN,
-    issuer: 'rhealth-api',
-    audience: 'rhealth-mobile'
+    issuer: 'rlx-api',
+    audience: 'rlx-mobile'
   });
 };
 

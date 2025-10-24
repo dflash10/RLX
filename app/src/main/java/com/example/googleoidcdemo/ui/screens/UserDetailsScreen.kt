@@ -154,12 +154,12 @@ fun UserDetailsScreen(
                             )
                         } else {
                             Image(
-                                painter = painterResource(id = R.drawable.ic_rhealth_logo),
+                                painter = painterResource(id = R.drawable.ic_rlx_logo),
                                 contentDescription = "Default Avatar",
                                 modifier = Modifier
                             .size(48.dp)
                                     .clip(CircleShape)
-                                    .background(RHealthBrown),
+                                    .background(RLXBrown),
                                 contentScale = ContentScale.Crop
                             )
                         }
@@ -178,7 +178,7 @@ fun UserDetailsScreen(
             // Header Section
             Text(
                 text = "Tell a bit about yourself",
-                color = RHealthText,
+                color = RLXText,
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -189,7 +189,7 @@ fun UserDetailsScreen(
             
             Text(
                 text = "We'll personalize your experience based on your details.",
-                color = RHealthTextGray,
+                color = RLXTextGray,
                 fontSize = 16.sp,
                 textAlign = TextAlign.Center,
                 fontFamily = androidx.compose.ui.text.font.FontFamily.SansSerif
@@ -200,7 +200,7 @@ fun UserDetailsScreen(
             // Form Fields
             Card(
                 modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(containerColor = RHealthWhite),
+                colors = CardDefaults.cardColors(containerColor = RLXWhite),
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
                 shape = RoundedCornerShape(20.dp)
             ) {
@@ -346,7 +346,7 @@ fun UserDetailsScreen(
                     var height by remember { mutableStateOf(170f) }
                     Text(
                         text = "Height: ${height.toInt()}cm",
-                        color = RHealthText,
+                        color = RLXText,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -366,7 +366,7 @@ fun UserDetailsScreen(
                     var weight by remember { mutableStateOf(70f) }
                     Text(
                         text = "Weight: ${weight.toInt()}kg",
-                        color = RHealthText,
+                        color = RLXText,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Medium
                     )
@@ -533,7 +533,7 @@ fun UserDetailsScreen(
             // Footer
             Text(
                 text = "© Powered by Rachaita Labs",
-                color = RHealthTextGray,
+                color = RLXTextGray,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Light,
                 textAlign = TextAlign.Center,
@@ -584,7 +584,7 @@ fun UserDetailsScreen(
                                 text = "Profile",
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = RHealthText
+                                color = RLXText
                             )
                             
                             IconButton(
@@ -593,7 +593,7 @@ fun UserDetailsScreen(
                                 Text(
                                     text = "✕",
                                     fontSize = 18.sp,
-                                    color = RHealthTextGray
+                                    color = RLXTextGray
                                 )
                             }
                         }
@@ -617,12 +617,12 @@ fun UserDetailsScreen(
                                 )
                             } else {
                                 Image(
-                                    painter = painterResource(id = R.drawable.ic_rhealth_logo),
+                                    painter = painterResource(id = R.drawable.ic_rlx_logo),
                                     contentDescription = "Default Avatar",
                                     modifier = Modifier
                                         .size(80.dp)
                                         .clip(CircleShape)
-                                        .background(RHealthBrown),
+                                        .background(RLXBrown),
                                     contentScale = ContentScale.Crop
                                 )
                             }
@@ -632,7 +632,7 @@ fun UserDetailsScreen(
                             // User Name
                             Text(
                                 text = userSession?.name ?: "",
-                                color = RHealthText,
+                                color = RLXText,
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center
@@ -644,7 +644,7 @@ fun UserDetailsScreen(
                             if (userSession?.email != null) {
                                 Text(
                                     text = userSession.email,
-                                    color = RHealthTextGray,
+                                    color = RLXTextGray,
                                     fontSize = 14.sp,
                                     textAlign = TextAlign.Center
                                 )
@@ -654,7 +654,7 @@ fun UserDetailsScreen(
                             if (userSession?.phone != null) {
                                 Text(
                                     text = userSession.phone,
-                                    color = RHealthTextGray,
+                                    color = RLXTextGray,
                                     fontSize = 14.sp,
                                     textAlign = TextAlign.Center
                                 )
@@ -670,8 +670,8 @@ fun UserDetailsScreen(
                                 showDrawer = false
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = RHealthOrange,
-                                contentColor = RHealthWhite
+                                containerColor = RLXOrange,
+                                contentColor = RLXWhite
                             ),
                             shape = RoundedCornerShape(12.dp),
                             modifier = Modifier

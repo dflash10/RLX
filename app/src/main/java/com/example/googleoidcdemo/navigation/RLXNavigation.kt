@@ -14,7 +14,7 @@ import com.example.googleoidcdemo.ui.screens.WelcomeScreen
 import kotlinx.coroutines.launch
 
 @Composable
-fun RHealthNavigation(navController: NavHostController, context: Context? = null, mainActivity: MainActivity? = null) {
+fun RLXNavigation(navController: NavHostController, context: Context? = null, mainActivity: MainActivity? = null) {
     val sessionManager = remember { context?.let { SessionManager(it) } }
     var isLoggedIn by remember { mutableStateOf(false) }
     var isLoading by remember { mutableStateOf(true) }
@@ -153,4 +153,3 @@ fun RHealthNavigation(navController: NavHostController, context: Context? = null
         }
     }
 }
-

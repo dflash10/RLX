@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rhealth</string>
+    <string name="app_name">RLX</string>
     <string name="sign_in_with_google">Sign in with Google (OIDC)</string>
     <string name="sign_in_error_title">Sign-in Error</string>
     <string name="sign_in_error_message">An error occurred while attempting Google OIDC sign-in.</string>

@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_launcher"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RHealth"
+        android:theme="@style/Theme.RLX"
         android:usesCleartextTraffic="false">
 
         <!-- Main Activity -->
