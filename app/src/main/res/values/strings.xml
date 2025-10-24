@@ -1,12 +1,131 @@
 <resources>
+    <!-- App Configuration -->
     <string name="app_name">RLX</string>
+    <string name="server_client_id">YOUR_GOOGLE_WEB_CLIENT_ID</string>
+    <string name="android_client_id">YOUR_GOOGLE_ANDROID_CLIENT_ID</string>
+    <string name="client_secret">YOUR_GOOGLE_CLIENT_SECRET</string>
+    
+    <!-- App Labels -->
+    <string name="app_tagline">Discover your wellness Journey</string>
+    <string name="powered_by">Powered by Rachaita Labs</string>
+    
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Discover your wellness Journey</string>
+    <string name="welcome_start_button">Start Now</string>
+    <string name="welcome_logo_description">RLX Logo</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">Welcome back! Glad to see you, Again!</string>
+    <string name="login_email_phone_label">Email or Phone</string>
+    <string name="login_email_phone_hint">Enter your email or phone number</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">Enter your password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_button">Login</string>
+    <string name="login_phone_button">Login with phone (OTP)</string>
+    <string name="login_logo_description">RLX Logo</string>
+    
+    <!-- Sign Up Screen -->
+    <string name="signup_title">Just a few quick things to get started</string>
+    <string name="signup_name_label">Full Name</string>
+    <string name="signup_name_hint">Enter your full name</string>
+    <string name="signup_email_label">Email</string>
+    <string name="signup_email_hint">Enter your email address</string>
+    <string name="signup_phone_label">Phone Number</string>
+    <string name="signup_phone_hint">Enter your phone number</string>
+    <string name="signup_password_label">Password</string>
+    <string name="signup_password_hint">Create a strong password</string>
+    <string name="signup_verify_otp_button">Verify OTP</string>
+    <string name="signup_or_divider">— OR —</string>
+    <string name="signup_google_signin">Sign in with Google</string>
+    <string name="signup_google_logo_description">Google</string>
+    <string name="signup_already_have_account">Already have an account? Sign In</string>
+    <string name="signup_logo_description">RLX Logo</string>
+    
+    <!-- User Details Screen -->
+    <string name="user_details_title">Tell a bit about yourself</string>
+    <string name="user_details_subtitle">We\'ll personalize your experience based on your details.</string>
+    <string name="user_details_first_name_label">First Name</string>
+    <string name="user_details_first_name_hint">Enter your first name</string>
+    <string name="user_details_last_name_label">Last Name</string>
+    <string name="user_details_last_name_hint">Enter your last name</string>
+    <string name="user_details_age_label">Age</string>
+    <string name="user_details_age_hint">Enter your age</string>
+    <string name="user_details_height_label">Height: %1$dcm</string>
+    <string name="user_details_weight_label">Weight: %1$dkg</string>
+    <string name="user_details_gender_label">Gender</string>
+    <string name="user_details_gender_male">Male</string>
+    <string name="user_details_gender_female">Female</string>
+    <string name="user_details_gender_other">Other</string>
+    <string name="user_details_blood_type_label">Blood Type</string>
+    <string name="user_details_blood_type_a_positive">A+</string>
+    <string name="user_details_blood_type_a_negative">A-</string>
+    <string name="user_details_blood_type_b_positive">B+</string>
+    <string name="user_details_blood_type_b_negative">B-</string>
+    <string name="user_details_blood_type_ab_positive">AB+</string>
+    <string name="user_details_blood_type_ab_negative">AB-</string>
+    <string name="user_details_blood_type_o_positive">O+</string>
+    <string name="user_details_blood_type_o_negative">O-</string>
+    <string name="user_details_next_button">Next</string>
+    <string name="user_details_profile_title">Profile</string>
+    <string name="user_details_logout_button">Logout</string>
+    <string name="user_details_user_avatar_description">User Avatar</string>
+    <string name="user_details_default_avatar_description">Default Avatar</string>
+    <string name="user_details_user_profile_description">User Profile</string>
+    
+    <!-- Common Labels -->
+    <string name="common_loading">Loading...</string>
+    <string name="common_error">Error</string>
+    <string name="common_success">Success</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_ok">OK</string>
+    <string name="common_save">Save</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_back">Back</string>
+    <string name="common_next">Next</string>
+    <string name="common_previous">Previous</string>
+    <string name="common_done">Done</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_skip">Skip</string>
+    <string name="common_retry">Retry</string>
+    <string name="common_close">Close</string>
+    
+    <!-- Validation Messages -->
+    <string name="validation_required_field">This field is required</string>
+    <string name="validation_invalid_email">Please enter a valid email address</string>
+    <string name="validation_invalid_phone">Please enter a valid phone number</string>
+    <string name="validation_password_too_short">Password must be at least 6 characters</string>
+    <string name="validation_password_weak">Password is too weak</string>
+    <string name="validation_name_too_short">Name must be at least 2 characters</string>
+    <string name="validation_age_invalid">Please enter a valid age</string>
+    <string name="validation_height_invalid">Please enter a valid height</string>
+    <string name="validation_weight_invalid">Please enter a valid weight</string>
+    
+    <!-- Error Messages -->
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_server">Server error. Please try again later.</string>
+    <string name="error_authentication_failed">Authentication failed</string>
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="error_user_not_found">User not found</string>
+    <string name="error_email_already_exists">Email already exists</string>
+    <string name="error_phone_already_exists">Phone number already exists</string>
+    <string name="error_otp_expired">OTP has expired</string>
+    <string name="error_otp_invalid">Invalid OTP</string>
+    <string name="error_session_expired">Session expired. Please login again.</string>
+    
+    <!-- Success Messages -->
+    <string name="success_login">Login successful</string>
+    <string name="success_signup">Account created successfully</string>
+    <string name="success_profile_updated">Profile updated successfully</string>
+    <string name="success_otp_sent">OTP sent to your phone</string>
+    <string name="success_otp_verified">OTP verified successfully</string>
+    
+    <!-- Legacy strings for backward compatibility -->
     <string name="sign_in_with_google">Sign in with Google (OIDC)</string>
     <string name="sign_in_error_title">Sign-in Error</string>
     <string name="sign_in_error_message">An error occurred while attempting Google OIDC sign-in.</string>
     <string name="back_to_login">Back to Login</string>
-    <string name="server_client_id">YOUR_GOOGLE_WEB_CLIENT_ID</string>
-    <string name="android_client_id">YOUR_GOOGLE_ANDROID_CLIENT_ID</string>
-    <string name="client_secret">YOUR_GOOGLE_CLIENT_SECRET</string>
     <string name="welcome_text">Welcome</string>
     <string name="sign_in_subtitle">Sign in to continue</string>
     <string name="sign_out">Sign Out</string>
